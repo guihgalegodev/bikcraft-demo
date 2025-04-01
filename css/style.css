@@ -222,8 +222,10 @@ p {
     gap: 1.875rem;
     justify-items: center;
     align-items: center;
-    place-self: start;
+    justify-content: space-between;
+    place-self: normal;
     margin-left: 2.5rem;
+    margin-right: 5rem;
   }
 
   .menu {
@@ -241,7 +243,7 @@ p {
   }
 
   .menu a:first-child {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   .menu a {
@@ -309,5 +311,15 @@ p {
 
   p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo {
+    width: 120px;
+  }
+
+  #btn-mobile {
+    font-size: 0.925rem;
   }
 }
