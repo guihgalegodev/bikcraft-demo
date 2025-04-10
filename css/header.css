@@ -1,0 +1,140 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.menu a {
+  display: block;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+}
+
+.menu a:hover {
+  border-color: #e21;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    gap: 1.875rem;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    flex-direction: row;
+    gap: 1.875rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    place-self: normal;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #f7f7f7;
+    height: 0px;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .menu a:first-child {
+    margin-top: 0.625rem;
+  }
+
+  .menu a {
+    max-width: 150px;
+    padding: 0.625rem 2.5rem;
+    text-align: left;
+    background-color: #f7f7f7;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  nav.active .menu {
+    height: calc(45vh - 10px);
+    visibility: visible;
+    /* overflow-y: auto; */
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+
+  #hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+
+  nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo {
+    width: 120px;
+  }
+
+  #btn-mobile {
+    font-size: 0.925rem;
+  }
+}

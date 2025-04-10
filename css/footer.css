@@ -1,0 +1,19 @@
+.rodape {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .rodape {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rodape p {
+    font-size: 1rem;
+  }
+}
